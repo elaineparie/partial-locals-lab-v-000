@@ -17,15 +17,14 @@ class Student < ActiveRecord::Base
   def self.search(search_name)
     search_name = search_name.downcase
     array = []
-    if search_name == ''
-      self.all
-    else
+    if search_name != ''
       self.all.each do |student|
     #    if student.name != nil
-      if student.name.downcase.include?(search_name)
+      student.name.downcase.include?(search_name)
       array << student
       array
-      end
+    else 
+      self.all
     end
   end
 end
