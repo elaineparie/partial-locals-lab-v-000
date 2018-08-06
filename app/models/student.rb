@@ -21,7 +21,7 @@ class Student < ActiveRecord::Base
         self.all.each do |student|
           if student.name.downcase.include?(search_name)
             array << student
-            emd
+          end
         end
         array
       else
