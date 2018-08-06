@@ -25,7 +25,6 @@ class Student < ActiveRecord::Base
       if student.name.downcase.include?(student_name)
       array << student
       end
-      return array
     end
   end
 end
