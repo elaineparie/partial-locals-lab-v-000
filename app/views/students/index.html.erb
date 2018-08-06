@@ -1,5 +1,5 @@
 
-  <%Student.search(input).each do |student|%>
+  <%@students.search(input).each do |student|%>
 
 <%= render partial: "student", locals: {student: student} %>
 
