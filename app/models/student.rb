@@ -19,7 +19,6 @@ class Student < ActiveRecord::Base
     array = []
     if search_name != ''
       self.all.each do |student|
-    #    if student.name != nil
       array << student.name.downcase.include?(search_name)
       array
     end
