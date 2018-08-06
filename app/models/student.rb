@@ -15,7 +15,7 @@ class Student < ActiveRecord::Base
   has_many :classrooms, through: :classroom_students
 
   def self.search(search_name)
-    search_name = search_name
+    search_name = search_name.downcase
     array = []
       if search_name != ''
         self.all.each do |student|
