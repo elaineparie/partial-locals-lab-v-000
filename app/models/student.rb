@@ -24,7 +24,7 @@ class Student < ActiveRecord::Base
     #    if student.name != nil
       if student.name.downcase.include?(search_name)
       array << student
-      return array
+      array
       end
     end
   end
