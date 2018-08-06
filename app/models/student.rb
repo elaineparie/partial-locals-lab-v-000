@@ -23,6 +23,7 @@ class Student < ActiveRecord::Base
       student.name.downcase.include?(search_name)
       array << student
       array
+    end
       else
         self.all
     end
