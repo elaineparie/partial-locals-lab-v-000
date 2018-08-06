@@ -20,7 +20,7 @@ class Student < ActiveRecord::Base
     if student_name == ''
       self.all
     else
-      self.all.collect do |student|
+      self.all.each do |student|
         if student.name != nil
       if student.name.downcase.include?(student_name)
       array << student
