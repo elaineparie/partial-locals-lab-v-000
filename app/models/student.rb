@@ -24,7 +24,6 @@ class Student < ActiveRecord::Base
       if student.name.downcase.include?(student_name)
       array << student
       array
-      binding.pry
     end
     end
   end
